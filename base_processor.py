@@ -16,8 +16,9 @@ class BaseScriptProcessor:
         zoom: I don't actually know what this does, this is a guess
         color: Probably a color, only value I've seen for this is 黑
         chara: A character sprite, probably
-        a,b,c,d,x,y: No idea what these do
+        a,b,c,d,x,y: No idea what these do.
 
+        sometimes ints can be RANDOM, DOWN, UP or something else like that
         set_var takes two variable names, a target and a source. 
         it sets the value of the target to the value of the source with an offset (I assume)
    """
