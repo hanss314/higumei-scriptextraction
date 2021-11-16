@@ -1,3 +1,17 @@
+"""
+Given a higumei script, extracts all the lines containing text which is shown to the player.
+Useful for translation.
+Also prefixes each line with the command index, for integrating the translated text back into the commands.
+Outputs in the following format
+
+<command index>:
+<Speaker>
+<Line 1>
+<Line 2> ...
+
+Each command is separated by two newlines.
+"""
+
 from sys import argv
 from base_processor import BaseScriptProcessor
 
