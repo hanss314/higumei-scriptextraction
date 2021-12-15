@@ -147,7 +147,7 @@ class BaseScriptProcessor:
         '''
 
     def process_file(self, filename: str):
-        with open(filename, 'r') as json_file:
+        with open(filename, 'rb') as json_file:
             data = json.load(json_file)
 
         if 'scr' not in data:
