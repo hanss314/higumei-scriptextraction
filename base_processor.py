@@ -6,22 +6,23 @@ from inspect import getcallargs
 class BaseScriptProcessor:
 
 
-    """General handler functions. Override these in your subclass.
-        Parameter names
-        ----------
-        raw: Raw command, as a dictionary
-        cmd: name of command, either cmd0 or cmd1 in the raw command
-        motion: some type of motion, value is usually in japanese.
-        filename: not actually a filename, but a name referring to a resource to be used by the command
-        zoom: I don't actually know what this does, this is a guess
-        color: Probably a color, only value I've seen for this is 黑
-        chara: A character sprite, probably
-        position: usually left, right, centre etc. I think
-        a,b,c,d,x,y: No idea what these do.
+    """
+    General handler functions. Override these in your subclass.
+    Parameter names
+    ----------
+    raw: Raw command, as a dictionary
+    cmd: name of command, either cmd0 or cmd1 in the raw command
+    motion: some type of motion, value is usually in japanese.
+    filename: not actually a filename, but a name referring to a resource to be used by the command
+    zoom: I don't actually know what this does, this is a guess
+    color: Probably a color, only value I've seen for this is 黑
+    chara: A character sprite, probably
+    position: usually left, right, centre etc. I think
+    a,b,c,d,x,y: No idea what these do.
 
-        sometimes ints can be RANDOM, DOWN, UP or something else like that
-        set_var takes two variable names, a target and a source. 
-        it sets the value of the target to the value of the source with an offset (I assume)
+    sometimes ints can be RANDOM, DOWN, UP or something else like that
+    set_var takes two variable names, a target and a source. 
+    it sets the value of the target to the value of the source with an offset (I assume)
     """
     def shakeset(self, raw, cmd, motion, a:int, b:int, c:int, d:int): self.handle_default(raw, cmd)
     def zoom(self, raw, cmd, zoom:float, position, x:int, y:int=0): self.handle_default(raw, cmd)
