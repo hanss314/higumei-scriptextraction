@@ -141,10 +141,8 @@ class BaseScriptProcessor:
         elif cmd not in self.seen:
             self.seen.add(cmd)
             print(f'def {cmd}(self, raw, cmd, {", ".join(self.get_arg_list(command))}): self.handle_default(raw, cmd)')
-        '''
         else:
             self.handle_default(command, cmd)
-        '''
 
     def process_file(self, filename: str):
         with open(filename, 'rb') as json_file:
